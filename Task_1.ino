@@ -8,20 +8,20 @@ int pinG = 7;
 int i = 0;
 int j = 0;
 int Arduino_Pins[7] = {pinA, pinB, pinC, pinD, pinE, pinF, pinG};
-int Segment_Pins[10][7] = {{1, 1, 1, 1, 1, 1, 0}, // 0
-{0, 1, 1, 0, 0, 0, 0}, // 1
-{1, 1, 0, 1, 1, 0, 1}, // 2
- {1, 1, 1, 1, 0, 0, 1}, // 3
-{0, 1, 1, 0, 0, 1, 1}, // 4
-{1, 0, 1, 1, 0, 1, 1}, // 5
-{1, 0, 1, 1, 1, 1, 1}, // 6
-{1, 1, 1, 0, 0, 0, 0}, // 7
- {1, 1, 1, 1, 1, 1, 1}, // 8
-{1, 1, 1, 1, 0, 1, 1}, // 9
+int Segment_Pins[10][7] = {{1, 1, 1, 1, 1, 1, 0}, 
+{0, 1, 1, 0, 0, 0, 0}, 
+{1, 1, 0, 1, 1, 0, 1}, 
+ {1, 1, 1, 1, 0, 0, 1}, 
+{0, 1, 1, 0, 0, 1, 1},
+{1, 0, 1, 1, 0, 1, 1}, 
+{1, 0, 1, 1, 1, 1, 1}, 
+{1, 1, 1, 0, 0, 0, 0},
+ {1, 1, 1, 1, 1, 1, 1}, 
+{1, 1, 1, 1, 0, 1, 1}, 
 };
 
 void setup() {
-  // put your setup code here, to run once:
+
   pinMode(pinA, OUTPUT);
   pinMode(pinB, OUTPUT);
   pinMode(pinC, OUTPUT);
@@ -33,7 +33,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+ 
    for (j = 0; j<7; j++)
   {
     digitalWrite(Arduino_Pins[j], Segment_Pins[i][j]);
@@ -45,7 +45,7 @@ void loop() {
     {
       
     }
-    i++; // i = i + 1;
+    i++;
   }
   if(i == 10)
   {
